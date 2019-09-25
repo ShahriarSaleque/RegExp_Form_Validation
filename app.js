@@ -39,4 +39,14 @@ function validateEmail() {
   }
 }
 
-function validatePhone() {}
+function validatePhone() {
+  const phone = document.getElementById("phone");
+  //regular expression
+  const re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
+  //validate using re
+  if (re.test(phone.value)) {
+    phone.classList.remove("is-invalid");
+  } else {
+    phone.classList.add("is-invalid");
+  }
+}
