@@ -26,3 +26,17 @@ function validateZip() {
     zip.classList.add("is-invalid");
   }
 }
+
+function validateEmail() {
+  const email = document.getElementById("email");
+  //regular expression
+  const re = /^([a-zA-z0-9_\-\.]+)@([a-zA-z0-9_\-\.]+)\.([a-zA-z]{2,5})$/;
+  //Validate email with re
+  if (re.test(email.value)) {
+    email.classList.remove("is-invalid");
+  } else {
+    email.classList.add("is-invalid");
+  }
+}
+
+function validatePhone() {}
